@@ -1,9 +1,9 @@
 Cnidarian species phylogeny was made following https://github.com/josephryan/DeBiasse_cnidophylogenomics
 
 Steps:
-1. hmm2aln.sh
-2. keep_one_seq.py
-3. rename_filtered
-4. combine_alignments
-5a. mafft and Gblocks then iqtree
-5b. maffts and iqtree2 no (Gblocks)
+1. hmm2aln.sh - from https://github.com/josephryan/hmm2aln.pl (download repository and requirements) used to find the 784 genes in our genome
+2. keep_one_seq.py - to keep the longest transcript
+3. rename_filtered - add identifier to our species
+4. combine_alignments - combine with the alignments from DeBiasse
+5a. mafft and Gblocks then iqtree - alignment and tree
+5b. mafft and iqtree2 (no Gblocks)
