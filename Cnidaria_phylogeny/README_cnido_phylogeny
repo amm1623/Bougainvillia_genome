@@ -5,7 +5,7 @@ Steps:
 2. keep_one_seq.py - to keep the longest transcript
 3. rename_filtered - add identifier to our species
 4. combine_alignments - combine with the alignments from DeBiasse
-5. mafft
+5. mafft - align added sequences 
 6. OPTIONAL: Gblocks to trim areas of high diveregencfe
 7.iqtree2
 
