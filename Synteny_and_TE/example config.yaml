@@ -1,0 +1,30 @@
+# 
+# This is an example config file for odp/scripts/odp
+#
+# # To use this software first copy this config file to your analysis directory
+# cp odp/example_configs/CONFIG_odp.yaml ./config.yaml
+# # Then modify the config file to include your own data
+# vim config.yaml
+# # Then run the pipeline
+# snakemake -r -p --snakefile odp/scripts/odp
+
+
+ignore_autobreaks: True       # Skip steps to find breaks in synteny blocks
+diamond_or_blastp: "blastp"  # "diamond" or "blastp"
+duplicate_proteins: "fail"    # currently only "fail" or "best". Fail doesn't allow duplicate names or seqs
+plot_LGs: True                # Plot the ALGs based on the installed databases
+plot_sp_sp: True              # Plot the synteny between two species, if False just generates .rbh files
+
+
+
+species:
+  Bougainvillia:
+    proteins: /hb/home/amacia16/Boug_project/Bougainvillia_aa_cdhit.pep
+    chrom: /hb/home/amacia16/Boug_project/Boug_u.chrom
+    genome: /hb/home/amacia16/Boug_project/Boug_filtered.fa
+    minscafsize: 1000000
+    Hydra:
+    proteins: /hb/home/amacia16/Hydra_genome/Hydra_prot_u.fasta
+    chrom: /hb/home/amacia16/Hydra_genome/Hydra_u.chrom
+    genome: /hb/home/amacia16/Hydra_genome/Hydra_v3.fasta
+    minscafsize: 1000000
