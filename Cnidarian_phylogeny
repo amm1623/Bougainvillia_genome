@@ -1,9 +1,1 @@
-Cnidarian species phylogeny was made following https://github.com/josephryan/DeBiasse_cnidophylogenomics
 
-Steps:
-1. hmm2aln.sh
-2. keep_one_seq.py
-3. rename_filtered
-4. combine_alignments
-5a. mafft and Gblocks then iqtree
-5b. maffts and iqtree2 no (Gblocks)
