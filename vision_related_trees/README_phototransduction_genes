@@ -1,0 +1,9 @@
+1.Downloaded transcriptomes from NCBI for 26 cnidatian species
+2. transdecoder v. 5.7.1 to extract coding and peptide sequences and cd-hit v. 4.8.1 with parameters -c 0.9 -n 5 to remove redundant transcripts (Li & Godzik 2006; Fu et al. 2012). We used 
+3. orthofinder v. 2.5.5 to identify orthogroups 
+4. MAFFT v. 7.520 and iqtree2 v. 2.2.2.6 to generate individual gene trees
+
+For opsins, dowload fasta from McCulloch et al. 2023 https://pubmed.ncbi.nlm.nih.gov/37735470/
+1. use BLAST to search for opsins in Bougainvillia
+2. Add to opsin fasta
+3. MAFFT and iqtree 
