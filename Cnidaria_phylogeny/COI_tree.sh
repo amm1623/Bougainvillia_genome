@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#SBATCH -p 128x24   # Partition name
+#SBATCH -J iqtree        # Job name
+#SBATCH --mail-user=amacia16@ucsc.edu
+#SBATCH --mail-type=ALL
+#SBATCH -o maaft_iqtree.out    # Name of stdout output file
+#SBATCH -N 1       # Total number of nodes requested (128x24/Instructional only)
+#SBATCH -n 16        # Total number of mpi tasks requested per node
+#SBATCH -t 64:00:00  # Run Time (hh:mm:ss) - 1.5 hours (optional)
+#SBATCH --mem=4G # Memory to be allocated PER NODE
+
+module load mafft
+module load iq-tree
+
+mafft.bat --thread 4 --auto COI_boug.fasta > COI_boug_aligned.fasta
+
+iqtree2 -s COI_boug_aligned.fasta -m MFP -B 1000 -alrt 1000 -T 8
